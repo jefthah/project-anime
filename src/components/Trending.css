@@ -1,0 +1,58 @@
+.custom-carousel-container {
+  width: 30%; /* Atur lebar carousel wrapper sesuai keinginan */
+  height: 800px; /* Atur tinggi carousel wrapper sesuai keinginan */
+  position: relative; /* Tetapkan posisi ke relatif untuk memungkinkan pengaturan absolut untuk panah navigasi */
+  margin: auto; /* Menengahkan wrapper */
+}
+
+.custom-carousel-image {
+  border-radius: 10px; /* Membuat gambar memiliki sudut bulat */
+  width: 100%; /* Gambar akan mengisi lebar pembungkus */
+  height: 900px; /* Gambar akan mengisi tinggi pembungkus */
+}
+
+  
+
+.custom-carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang hitam dengan opasitas 50% */
+  padding: 10px; /* Ruang di sekitar teks */
+}
+.custom-carousel-caption h3,
+.custom-carousel-caption p {
+  color: white; /* Warna teks putih */
+  margin: 0; /* Hilangkan margin bawaan */
+}
+
+.trending-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.carousel-arrow {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  color: gray;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 20px;
+}
