@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
-import "./Trending.css"; // Import file CSS kustom
+// import "./Trending.css"; // Import file CSS kustom
 
 const Trending = () => {
   const [carouselItems, setCarouselItems] = useState([]);
@@ -32,14 +32,14 @@ const Trending = () => {
   };
 
   return (
-    <div className="m-5 trending-container">
-      <h1 className="text-center">Trending Anime</h1>
-      <div className="custom-carousel-container m-5">
+    <div className=" m-5 trending-container">
+      <h1 className="m-5">Trending Anime</h1>
+      <div className="d-flex justify-content-center">
         <Carousel activeIndex={index} onSelect={handleSelect} interval={null} indicators={false} controls={false}>
           {carouselItems.map((item, idx) => (
             <Carousel.Item key={idx}>
               <img
-                className="d-block w-100 custom-carousel-image"
+                className=" w-100 p-3 h-100 d-flex justify-content-center "
                 src={item.imageUrl}
                 alt={item.title}
               />
@@ -48,13 +48,11 @@ const Trending = () => {
                 <p>Rating: {item.rating}</p>
               </Carousel.Caption>
             </Carousel.Item>
+            
           ))}
         </Carousel>
       </div>
-      <div className="carousel-arrows">
-        <span className="carousel-arrow prev" onClick={() => setIndex(index === 0 ? carouselItems.length - 1 : index - 1)}>&#10094;</span>
-        <span className="carousel-arrow next" onClick={() => setIndex(index === carouselItems.length - 1 ? 0 : index + 1)}>&#10095;</span>
-      </div>
+      
     </div>
   );
 };
